@@ -1,7 +1,6 @@
 var inquirer = require("inquirer");
 var BasicDeck = require("./BasicDeck.js");
-
-var ClozeCard = require("./ClozeCard.js");
+var ClozeDeck = require("./ClozeDeck.js");
 var basicCardsArr = [];
 
 inquirer.prompt([
@@ -21,7 +20,8 @@ inquirer.prompt([
 		theBasicDeck.runBasic();
 	}
 	else if(answer.flashcardType === "Cloze"){
-		console.log("coming soon");
+		var theClozeDeck = new ClozeDeck(answer.amountOfCards);
+		theClozeDeck.runCloze();
 	}
 
 });

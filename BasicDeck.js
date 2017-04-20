@@ -6,7 +6,6 @@ function BasicDeck(maxCount){
 	this.maxCount = maxCount;
 	this.cards = [];
 };
-console.log(this.cards)
 BasicDeck.prototype.runBasic = function(){
 	var self = this;
 			if(this.count < this.maxCount){
